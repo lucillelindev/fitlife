@@ -81,6 +81,21 @@ python -m http.server 8000
 npx http-server
 ```
 
+### GitHub Pages Deployment
+
+This project includes automated deployment to GitHub Pages using GitHub Actions:
+
+- **Automatic Deployment**: The site is automatically deployed to GitHub Pages on every push to the `main` branch
+- **Workflow File**: `.github/workflows/gh-pages.yml` handles the deployment process
+- **Live Site**: Once deployed, the site will be available at `https://[username].github.io/fitlife`
+- **Manual Deployment**: You can also trigger deployment manually from the Actions tab in GitHub
+
+The deployment workflow:
+1. Checks out the code
+2. Sets up GitHub Pages configuration
+3. Uploads the entire repository as a static site artifact
+4. Deploys to GitHub Pages using the `actions/deploy-pages` action
+
 ## 📁 File Structure
 
 ```
